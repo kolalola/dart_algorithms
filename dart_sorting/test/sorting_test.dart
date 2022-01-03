@@ -10,6 +10,7 @@ void main() {
     _testSorting('Bubble sort', BubbleSorter(comparator: intComparator));
     _testSorting('Shaker sort', ShakerSorter(comparator: intComparator));
     _testSorting('Hairbrush sort', HairbrushSorter(comparator: intComparator));
+    _testSorting('Insertion sort', InsertionSorter(comparator: intComparator));
   });
 }
 
