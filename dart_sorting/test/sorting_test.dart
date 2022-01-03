@@ -11,6 +11,7 @@ void main() {
     _testSorting('Shaker sort', ShakerSorter(comparator: intComparator));
     _testSorting('Hairbrush sort', HairbrushSorter(comparator: intComparator));
     _testSorting('Insertion sort', InsertionSorter(comparator: intComparator));
+    _testSorting('Selection sort', SelectionSorter(comparator: intComparator));
   });
 }
 
