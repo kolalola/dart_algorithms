@@ -14,6 +14,8 @@ class DataContainer<T> {
     elements = List.generate(length, (index) => random());
   }
 
+  void fromList(List<T> items) => elements = items;
+
   void printContent() => print(elements.join(','));
 
   void sort() {
@@ -22,7 +24,7 @@ class DataContainer<T> {
 
   bool isSorted() {
     for (var i = 0; i < elements.length - 1; i++) {
-      if (sorter.compareElements(elements[i], elements[i + 1]) >= 0) {
+      if (sorter.compareElements(elements[i], elements[i + 1]) > 0) {
         return false;
       }
     }

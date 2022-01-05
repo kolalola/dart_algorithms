@@ -12,15 +12,14 @@ void main() {
     _testSorting('Hairbrush sort', HairbrushSorter(comparator: intComparator));
     _testSorting('Insertion sort', InsertionSorter(comparator: intComparator));
     _testSorting('Selection sort', SelectionSorter(comparator: intComparator));
+    _testSorting('Quick sort', QuickSorter(comparator: intComparator));
   });
 }
 
-void _testSorting(String name, ISorter<int> sorter){
+void _testSorting(String name, ISorter<int> sorter) {
   test(name, () {
     final container = DataContainer<int>(
-      sorter: sorter,
-      random: () => Random().nextInt(10000),
-    );
+        sorter: sorter, random: () => Random().nextInt(10000), length: 55);
     container.init();
     container.sort();
     expect(container.isSorted(), true);
